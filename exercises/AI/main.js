@@ -79,23 +79,87 @@ console.log(uniuqeArr);
 
 let mySet = new Set();
 mySet.add(1)
+mySet.add(1)
+mySet.add(1)
+mySet.add(1)
 mySet.add(2)
+mySet.add(2)
+mySet.add(2)
+mySet.add(2)
+mySet.add(2)
+mySet.add(2)
+mySet.add(2)
+mySet.add(3)
 
-console.log(mySet.size);
-
-console.log(mySet);
-mySet = Array.from(mySet)
-console.log(mySet);
+let fv= [...mySet]
+console.log(fv);
 
 
+// console.log(mySet.size);
+
+// console.log(mySet);
+// mySet = Array.from(mySet)
+// console.log(mySet);
 
 
 
+// const products = [{name:'phone', price:100}, {name:'case', price:20}];
+
+
+// console.log(
+//     ({...products})
+// );
+// const withTax = products.map(p => ({ ...p, tax: p.price * 0.14 }));
+// console.log(withTax);
+
+
+
+
+
+// const priceUSD = [10,20,30];
+// const pirecEgp = priceUSD.map(n =>(n * 48))
+// console.log(pirecEgp);
 
 // What's the difference between map and forEach?
 // ? idk 
+// ! map ---chainable -->  transfrom data and get something back. >> convert units add tax (computed field)
+// ! foreach ---> sideEffect to each item. << log (debugging) array.foreach(callback fn)
+// const priceUSD = [10,20,30];
+// const pirecEgp = priceUSD.map(n =>(n * 48))
+// console.log(pirecEgp);
+
+// [1,2,3].forEach(n => (console.log("processig",n)));
+// returns undefined — nothing to collect
+// 3. Write to database
+
+
+
+
 
 // What does sort() do to strings vs numbers, and how do you fix it?
 // ? idk 
+uniuqe = [];
+let numbs = [3,20,4,10].sort((a,b)=> {
+    console.log(`${a} - ${b} = ${a-b} `);
+    return a-b;
+});
+console.log(uniuqe);
+
+console.log(numbs);
+
 //Why shouldn't you use for...in on arrays?
 // ? idk 
+// bc it loop on indeices 
+// 
+
+let a = "apple";
+let b = "bananna";
+
+console.log(a.localeCompare(b)); // negative -1 >> (a) before (b)
+
+
+let x= [1,2,3,5,6].reduce((x,u) => x+u,0);
+console.log(x);
+
+
+// https://leo-ai.brave.app/shared/f5e83744-20e9-4f60-ad05-ef6d218c7d49#jRp8VIBaOso0-AIjlGRyKaQvppH1nsC9o7j2mzjusmM
